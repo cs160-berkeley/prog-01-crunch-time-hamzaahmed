@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:background="@color/white"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.hamza.crunchtime.MainActivity"
+    tools:showIn="@layout/activity_main"
+    android:scrollIndicators="bottom"
+    android:textAlignment="textStart">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:hint="How many reps?"
+        android:id="@+id/AmountInput"
+        android:paddingBottom="18dp"
+        android:layout_below="@+id/ExerciseTitle"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="48px"
+        android:typeface="normal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Choose an exercise"
+        android:id="@+id/ExerciseTitle"
+        android:focusable="false"
+        android:layout_marginLeft="0dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="24dp" />
+
+    <Spinner
+        android:id="@+id/ExerciseSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/AmountInput"
+        android:layout_marginTop="24dp"
+        android:clickable="false"
+        android:spinnerMode="dropdown"
+        android:longClickable="false"
+        android:scrollIndicators="bottom"
+        android:dropDownSelector="#000000"
+        android:contextClickable="false" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculate"
+        android:background="@color/red"
+        android:textColor="@color/white"
+        android:id="@+id/CalculateButton"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:layout_below="@+id/AmountInput"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="28dp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/Output"
+        android:text="0"
+        android:textSize="76dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true" />
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="500dp"
+        android:layout_height="150dp"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context=".MainActivity"
+        android:background="#FFFFFF"
+        android:id="@+id/relativeLayout"
+        android:layout_below="@+id/Output"
+        android:layout_alignParentStart="true">\
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:layout_marginBottom="40dp">
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:background="#FFFFFF"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:id="@+id/Conversion4"
+                android:text="0" />
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="10"
+                android:background="#FFFFFF"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="Leg-lift"
+                android:id="@+id/text4"
+                android:textSize="12dp" />
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:background="#FFFFFF"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:id="@+id/Conversion10"
+                android:text="0" />
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="10"
+                android:background="#FFFFFF"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="Jogging"
+                android:id="@+id/text10"
+                android:textSize="12dp" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:background="#FFFFFF"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:id="@+id/Conversion5"
+                android:text="0" />
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="10"
+                android:background="#FFFFFF"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:id="@+id/text5"
+                android:text="Plank"
+                android:textSize="12dp" />
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:background="#FFFFFF"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:id="@+id/Conversion11"
+                android:text="0" />
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="10"
+                android:background="#FFFFFF"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:id="@+id/text11"
+                android:text="Swimming"
+                android:textSize="12dp" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:background="#FFFFFF"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:id="@+id/Conversion6"
+                android:text="0" />
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:background="#FFFFFF"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:id="@+id/text6"
+                android:text="Jumping Jacks"
+                android:textSize="12dp" />
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:background="#FFFFFF"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:id="@+id/Conversion12"
+                android:text="0" />
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:background="#FFFFFF"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:id="@+id/text12"
+                android:text="Stair Climbing"
+                android:textSize="12dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:layout_marginBottom="60dp">
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:background="#FFFFFF"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:id="@+id/Conversion3"
+                android:text="0" />
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="10"
+                android:background="#FFFFFF"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:id="@+id/text3"
+                android:text="Squats"
+                android:textSize="12dp" />
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:background="#FFFFFF"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:id="@+id/Conversion9"
+                android:text="0" />
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="10"
+                android:background="#FFFFFF"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:id="@+id/text9"
+                android:text="Walking"
+                android:textSize="12dp" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:layout_marginBottom="80dp">
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:background="#FFFFFF"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:id="@+id/Conversion2"
+                android:text="0" />
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="10"
+                android:background="#FFFFFF"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:id="@+id/text2"
+                android:text="Situps"
+                android:textSize="12dp" />
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:background="#FFFFFF"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:id="@+id/Conversion8"
+                android:text="0" />
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="10"
+                android:background="#FFFFFF"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:id="@+id/text8"
+                android:text="Cycling"
+                android:textSize="12dp" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:layout_marginBottom="100dp">
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:background="#FFFFFF"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:id="@+id/Conversion1"
+                android:text="0" />
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="10"
+                android:background="#FFFFFF"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:id="@+id/text1"
+                android:text="Pushups"
+                android:textSize="12dp" />
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:background="#FFFFFF"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:id="@+id/Conversion7"
+                android:text="0" />
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="10"
+                android:background="#FFFFFF"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:id="@+id/text7"
+                android:text="Pullups"
+                android:textSize="12dp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="calories"
+        android:id="@+id/textView"
+        android:layout_above="@+id/relativeLayout"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="5dp"
+        android:textColor="#E91E63" />
+
+</RelativeLayout>
