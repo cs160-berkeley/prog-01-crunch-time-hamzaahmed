@@ -1,22 +1,19 @@
-# PROG 01: Crunch Time
+# PROG 01: Oneset
 
-Briefly describe your app here.
+This application's purpose is to calculate the number of calories you burn when performing certain repetitions/minutes of a specific type of exercise. By choosing the type of exercise, then entering the amount of work you did, the application calculate not only the calories you burned, but also tells you how many minutes/repetitions you could have spent/done in another exercise in order to burn the same amount of calories.
 
 ## Authors
 
-FirstName LastName ([your_email@berkeley.edu](mailto:your_email@berkeley.edu))
+Hamza Ahmed ([hamza.ah@berkeley.edu](mailto:hamza.ah@berkeley.edu))
 
 ## Demo Video
 
-See [your demo video title here] (https://link_to_your_video)
+See [my Oneset demo video here] (https://www.youtube.com/watch?v=Dw0JOI7Nquw)
 
 ## Screenshots
 
-<img src="screenshots/main.png" height="400" alt="Screenshot"/>
+<img src="screenshots/oneset.jpg" height="400" alt="Screenshot"/>
 
 ## Acknowledgments
 
-* Hat tip to anyone who's code was used
-* Any other support
-
-*Feel free to enhance your README. For Markdown syntax, see [the GitHub Guides](https://guides.github.com/features/mastering-markdown/). Remove this line in your submission.*
+StackOverflow and the Android Developer Guide were used extensively throughout this project.
